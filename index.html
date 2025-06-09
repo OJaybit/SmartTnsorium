@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+</head>
+<body>
+        <div class="top-bar">
+            <span>
+                <ion-icon name="call-outline">11 222 333</ion-icon>
+            </span>
+        <ul class="side-bar">
+            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></li>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></li>
+            <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon></li>
+   </div>
+  
+<nav><div class="logo">
+    <a href="#"><img src="/smart_logo.jpeg" alt=""></a>
+</div>
+    <div class="toggle">
+        
+        <ion-icon name="menu-outline"></ion-icon>   
+    </div>
+    <ul class="menu">
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">shop</a></li>
+        <li><a href="">contact</a></li>
+    </ul>
+</nav> 
+
+<section class="slider">
+<figure>
+    <div class="slide">
+        <h1>
+Smart_ts_studio  </h1>
+<img src="/smart5.jpg" alt="">
+    </div>
+    <div class="slide">
+        <h1>
+            Smart_ts_studio  </h1>
+<img src="/smart1.jpg" alt="">
+    </div>
+    <div class="slide">
+        <h1>
+            Smart_ts_studio  </h1>
+<img src="/smart2.jpg" alt="">
+    </div>
+    <div class="slide">
+        <h1>
+            Smart_ts_studio </h1>
+<img src="/smart6.jpg" alt="">
+    </div>
+    <div class="slide">
+        <h1>
+            Smart_ts_studio<img src="/smart5.jpg" alt="">
+    </div>
+
+</figure>
+</section>
+<section>
+
+<div class="info_container">
+    <div class="popular_categories">
+    <div class="category_container">
+            <div class="category_img">
+                <ion-icon name="calendar-clear-outline"> 
+                </ion-icon>         </div>
+
+                     <div class="category_text">
+                <h4>24/7</h4>
+            </div>
+    
+    
+
+
+</div>
+
+<div class="category_container">
+    <div class="category_img">
+        <ion-icon name="call-outline"></ion-icon> </div>
+
+             <div class="category_text">
+        <h4>+2348132255176</h4>
+    </div>
+
+
+
+
+</div>
+
+<div class="category_container">
+    <div class="category_img">
+        <ion-icon name="mail-outline"></ion-icon>        </div>
+
+             <div class="category_text">
+        <h4>smartts@gmail.com</h4>
+    </div>
+
+
+
+
+</div>
+
+<div class="category_container">
+    <div class="category_img">
+        <ion-icon name="location-outline"></ion-icon>         </div>
+
+             <div class="category_text">
+        <h4>No 39, University Road Beside Yakoyo Tanke,
+            Ilorin. Kwara State
+        </h4>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+<div class="map">
+    <h2>use the map below for quick</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.165279095648!2d4.6032645!3d8.4833052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10364d1e17095f61%3A0xb516ccabe0b77cd7!2s39%20University%20Rd%2C%20Ilorin%20240102%2C%20Kwara!5e0!3m2!1sen!2sng!4v1749464901858!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> 
+</section>
+
+
+<section>
+
+<div class="quick_links">
+<h2>quick links</h2>
+    <ul class="menu">
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">shop</a></li>
+        <li><a href="">contact</a></li>
+    </ul>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- begining to java script to sidebar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(
+        function(){
+$( ".toggle").on("click", function(){
+if($(".menu").hasClass("active")){
+$(".menu").removeClass("active");
+$(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>  ");
+} else{
+    $(".menu").addClass("active");
+    
+    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon> ");
+
+}
+});
+        }
+    ); 
+</script>
+<!-- end to java script to sidebar -->
+
+
+</body>
+</html>
