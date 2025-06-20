@@ -93,7 +93,8 @@ nav a {
 }
 
 nav a:hover {
-  color: black;
+  color: #007bff;;
+  background-color: black;
 }
 
 .logo {
@@ -104,14 +105,16 @@ nav a:hover {
 }
 
 .logo a:hover {
-  color: #120f0f;
+  color: #007bff;
+background: none;
 }
 
 .logo img {
   width: 40px;
   margin-right: 10px;
   border: black solid;
-  border-radius: 70%;
+  border-radius: 50%;
+  width: 70px;
 }
 
 .menu {
@@ -217,43 +220,33 @@ nav a:hover {
 /* POPULAR CATEGORY */
 .popular_categories {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  width: 90%; /* 💜 Changed from 50vw to 90% */
-  background-color: rgb(255, 255, 255); /* White */
+  width: 90%; 
+  background-color: rgb(255, 255, 255); 
   padding: 40px 20px;
   margin: -60px auto 40px;
   max-width: 1000px;
   border-radius: 16px; 
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Shadow for thickness */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   z-index: 10; 
   position: relative;
 }
 
 /* added an @media for mobile */
 
-@media (max-width: 767px)
+@media (min-width: 768px) 
 { .popular_categories{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%; /* 💜 Changed from 50vw to 90% */
-  max-width: 600px; /* 💜 Limit on larger screens */
-  gap: 1rem;
-   background-color: rgb(255, 255, 255);
-   border-radius: 12px;
-  border: 1px solid #eee;
-  background: #fff;
-  margin-top: -60px;
-  z-index: 10;
+  flex-direction: row;
+  height: 300px;
+  width: 90%;
 }
 }
 
 .category_container {
-  width: 90%; /* 💜 Changed from 50% */
+  width: 90%; 
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -261,8 +254,8 @@ nav a:hover {
   align-items: center;
   margin-top: 5px;
   margin-bottom: 20px;
-  background-color: white; /* 💜 Fixed typo */
-  border: 2px dashed #999; /* 💜 Simplified border */
+  background-color: white; 
+  border: 2px dashed #999; 
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -271,10 +264,14 @@ nav a:hover {
   aspect-ratio: 1/1;
   border-radius: 70%;
   border: transparent solid;
+  color: #fff;
   background-color: rgb(61, 72, 81);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.category_img:hover{
+  color: #007bff;
 }
 
 .category_text > h5 {
@@ -325,17 +322,40 @@ button {
 }
 
 button:hover {
-  background-color: rgb(9, 16, 22);
+  background-color: #007bff;;
 }
 
+/* Default (Mobile First) */
 .map {
   width: 100%;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 0.5rem;
   gap: 1rem;
+}
+
+/* Tablets (e.g. iPads) */
+@media (min-width: 768px) {
+  .map {
+    height: 400px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+  .map {
+    height: 500px;
+  }
+}
+
+/* Large Screens / Desktops */
+@media (min-width: 1440px) {
+  .map {
+    height: 600px;
+  }
 }
 
 .map h2 {
@@ -348,58 +368,90 @@ button:hover {
   }
 }
 
-.about{
-  background-color: #999;
+
+* Footer General Styling */
+footer {
+    background-color: #999; /* Light grey background */
+    color: #555; /* Dark grey text */
+    padding: 60px 20px;
 }
 
-.parent_container{
-  margin-top: 0.7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.footer-container {
+    max-width: 1200px;
+    margin-top: 3rem;
+    /* --- Mobile First: Default is single column --- */
+    display: grid;
+    grid-template-columns: 1fr; /* One column by default */
+    gap: 40px; /* Space between sections on mobile */
+    text-align: center; /* Center text on mobile */
 }
 
-.main_info{
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* --- DESKTOP STYLES using a Media Query --- */
+/* This applies only on screens wider than 768px */
+@media (min-width: 768px) {
+    .footer-container {
+        /* On desktop, create a 4-column grid */
+        grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Adjust ratios as needed */
+        gap: 30px; /* Space between columns on desktop */
+        text-align: left; /* Align text to the left for columns */
+    }
 }
 
-.main_info>h1{
-  text-transform: capitalize;
-  font-weight: bold;
-  text-decoration: #120f0f;
-
+/* Styling for footer content */
+.footer-logo {
+    max-width: 100px; /* Adjust size as needed */
+    margin-bottom: 15px;
+    border-radius: 50%;
 }
 
-.quick_links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+footer h3, footer h4 {
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
-.quick_links ul {
-  display: flex;
-  flex-direction: column;
+footer p {
+    margin-bottom: 10px;
 }
 
-.social_links{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+/* Remove default list styling */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.social_links ul{
-  display: flex;
-  flex-direction: column;
-  color: rgb(61, 72, 81);
+footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Link styling */
+footer a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff; /* Change color on hover */
+    text-decoration: underline;
+}
+
+.footer-contact p{
+ color: #555;
+}
+
+/* Add space above the "Opening Hours" title */
+.opening-hours-title {
+    margin-top: 30px;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9em;
+    color: #888;
 }
