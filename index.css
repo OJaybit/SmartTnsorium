@@ -361,7 +361,14 @@ button:hover {
 .map h2 {
   text-transform: capitalize;
   text-decoration: none;
+
 }
+@media (max-width: 767px){
+  .map h2{
+    display: none;
+  }
+}
+
 @media (max-width: 767px){
   iframe{
     width: 100%;
